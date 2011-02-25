@@ -51,11 +51,7 @@ if (!defined('IN_CMS')) { exit(); }
 <?php foreach ($files as $file): ?>
     <tr class="<?php echo odd_even(); ?>">
       <td>
-        <?php if ($file->is_dir) { ?>
-            <img src="<?php echo FILES_ROOT;?>/images/dir_16.png" align="top" alt="dir icon" />
-        <?php } else { ?>
-            <img src="<?php echo FILES_ROOT;?>/images/page_16.png" align="top" alt="page icon" />
-        <?php } ?>
+        <img src="<?php echo URI_PUBLIC;?>wolf/icons/file-<?php echo $file->type ?>-16.png" align="top" />
         <?php echo $file->link; ?>
       </td>
       <td><code><?php echo $file->size; ?></code></td>
